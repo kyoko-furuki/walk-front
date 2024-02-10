@@ -6,12 +6,16 @@ export default function Walk() {
     <div className={styles.container}>
       <main className={styles.main}>
         <h2 className={styles.title}>Let's grow trees</h2>
-
         <ul>
-          <li>
-            <Link href="/walk/tree">Tap here</Link>
+          <li className={styles.tapHere}>
+            <Link href="/walk/tree">Tap here ▸▸</Link>
           </li>
         </ul>
+        <img
+          src="../img/walk_tree.png"
+          className={"${styles.walkTree} ${styles.overlap}"}
+        />
+        <img src="../img/walk_person.png" className={styles.walkPerson} />
       </main>
     </div>
   );
