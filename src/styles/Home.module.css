@@ -72,6 +72,19 @@
 .image2 {
   position: absolute;
   bottom: 29%;
+  animation: swayAnimation 3s ease-in-out infinite;
+}
+
+@keyframes swayAnimation {
+  0% {
+    transform: rotate(-2deg);
+  }
+  50% {
+    transform: rotate(2deg);
+  }
+  100% {
+    transform: rotate(-2deg);
+  }
 }
 
 .container3 img {
@@ -79,4 +92,8 @@
   bottom: 50%;
   left: 50%;
   transform: translateX(-50%);
+}
+
+.treeTop:hover {
+  filter: brightness(90%);
 }

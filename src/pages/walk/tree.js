@@ -14,7 +14,7 @@ export default function Walk() {
         <ul>
           <li>
             <Link href="/walk">
-              <img src="../img/tree_top.png" />
+              <img className={styles.treeTop} src="../img/tree_top.png" />
             </Link>
           </li>
         </ul>
