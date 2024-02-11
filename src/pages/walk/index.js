@@ -14,8 +14,13 @@ export default function Walk() {
         <img
           src="../img/walk_tree.png"
           className={"${styles.walkTree} ${styles.overlap}"}
+          style={{ width: "500px" }}
         />
-        <img src="../img/walk_person.png" className={styles.walkPerson} />
+        <img
+          src="../img/walk_person.png"
+          className={styles.walkPerson}
+          style={{ animation: `${styles.walkAnimation} 10s linear infinite` }}
+        />
       </main>
     </div>
   );

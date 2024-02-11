@@ -26,7 +26,7 @@
 .tapHere {
   position: relative;
   z-index: 1;
-  top: 230px;
+  top: 250px;
   font-weight: bold;
 }
 
@@ -40,7 +40,20 @@
 }
 
 .walkPerson {
+  position: relative;
+  z-index: 1;
   width: 50px;
+  top: -140px;
+  right: 100px;
+}
+
+@keyframes walkAnimation {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(430%);
+  }
 }
 
 .container2 {
