@@ -71,7 +71,7 @@
 
 .image2 {
   position: absolute;
-  bottom: 29%;
+  bottom: 225px;
   animation: swayAnimation 3s ease-in-out infinite;
 }
 
