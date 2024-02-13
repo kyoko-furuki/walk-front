@@ -1,11 +1,26 @@
 import Link from "next/link";
 import styles from "../../styles/Home.module.css";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 export default function Walk() {
   const [distance, setDistance] = useState(0);
   const [image, setImage] = useState("../img/tree_step1.png");
-  const [walkText, setWalkText] = useState("Walk own feet!!");
+  const [walkText, setWalkText] = useState("Let's go!!");
+
+  useEffect(() => {
+    async function fetchWalkingDistance() {
+      try {
+        const response = await fetch("/walking-distance");
+        const data = await response.json();
+        setDistance(data.distance);
+        updateImage(data.distance);
+      } catch (error) {
+        console.error("Error fetching walking distance:", error);
+      }
+    }
+
+    fetchWalkingDistance();
+  }, []);
 
   const updateImage = (newDistance) => {
     if (newDistance >= 60) {
@@ -32,21 +47,9 @@ export default function Walk() {
     }
   };
 
-  const handleInputChange = (event) => {
-    const newDistance = parseInt(event.target.value);
-    setDistance(newDistance);
-    updateImage(newDistance);
-  };
-
   return (
     <div className={styles.container2}>
       <h3>歩いた距離：{distance}km</h3>
-      <input
-        type="number"
-        value={distance}
-        onChange={handleInputChange}
-        placeholder="歩数を入力してください"
-      />
       <main className={styles.main}>
         <h2 className={styles.title}>{walkText}</h2>
         <img className={styles.image2} src={image} alt="Walking image" />
