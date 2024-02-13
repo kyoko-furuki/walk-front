@@ -56,17 +56,24 @@ export default function Walk() {
       </main>
 
       <div className={styles.container3}>
-        <ul>
-          <li>
-            <Link href="/walk">
-              <img
-                className={styles.treeTop}
-                src="../img/tree_top.png"
-                alt="Tree top"
-              />
-            </Link>
-          </li>
-        </ul>
+        <div className={styles.treeContainer}>
+          <Link href="/walk">
+            <img
+              className={styles.treeTop}
+              src="../img/tree_top.png"
+              alt="Tree top"
+            />
+          </Link>
+        </div>
+        <div className={styles.treeContainer}>
+          <Link href="/end">
+            <img
+              className={styles.treeEnd}
+              src="../img/tree_end.png"
+              alt="Tree end"
+            />
+          </Link>
+        </div>
       </div>
     </div>
   );
