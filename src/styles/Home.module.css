@@ -106,3 +106,35 @@
 .treeEnd:hover {
   filter: brightness(90%);
 }
+
+.container_end {
+  background-color: #12155c;
+}
+
+.title_end {
+  font-weight: bold;
+  font-size: 30px;
+  color: rgb(217, 220, 227);
+}
+
+.subtitle {
+  color: rgb(217, 220, 227);
+}
+
+.earth {
+  position: absolute;
+  top: 25%;
+  width: 300px;
+}
+.rotate {
+  animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

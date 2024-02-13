@@ -66,7 +66,7 @@ export default function Walk() {
           </Link>
         </div>
         <div className={styles.treeContainer}>
-          <Link href="/end">
+          <Link href="/walk/end">
             <img
               className={styles.treeEnd}
               src="../img/tree_end.png"
