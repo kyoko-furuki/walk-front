@@ -138,3 +138,7 @@
     transform: rotate(360deg);
   }
 }
+
+.text_end {
+  color: azure;
+}
